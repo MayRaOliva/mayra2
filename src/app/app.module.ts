@@ -8,6 +8,7 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { RegistrarEmpresaComponent } from './pages/crud/registrar-empresa/registrar-empresa.component';
 import { ActualizarEmpresaComponent } from './pages/crud/actualizar-empresa/actualizar-empresa.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

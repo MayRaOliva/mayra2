@@ -9,7 +9,7 @@ import { EmpresasService } from '../../services/empresas.service';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit {
-
+  searchText: any;
   empresas: EmpresaModel[] = [];
   idEmpresa: string = "";
 
@@ -85,8 +85,8 @@ export class CrudComponent implements OnInit {
 
   logo(url:string, name:string, text:string){
     Swal.fire({
-      title: name,
-      text: text,
+      title: 'Company name: ' + name,
+      text: 'Bussines Name: ' + text,
       imageUrl: url,
       imageWidth: 400,
       imageHeight: 200,
