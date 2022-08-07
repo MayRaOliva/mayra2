@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 
 body {
-  background-color: #001524;
+  background-color: #9005bb;
+  
   font-family: "Montserrat", sans-serif;
 }
+
+
 
 /* h1
 {
@@ -12,46 +15,26 @@ body {
   letter-spacing: 10px;
 } */
 
-.spinner {
-  height: 50px;
-  width: max-content;
-  font-size: 50px;
+/* From uiverse.io by @gagan-gv */
+.loader span {
+  font-size: 70px;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
-  letter-spacing: 1em;
-  color: #f5f5f5;
-  filter: drop-shadow(0 0 10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinner span {
-  animation: loading6454 1.75s ease infinite;
-}
-
-.spinner span:nth-child(2) {
-  animation-delay: 0.25s;
-}
-
-.spinner span:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.spinner span:nth-child(4) {
-  animation-delay: 0.75s;
-}
-
-.spinner span:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.spinner span:nth-child(6) {
-  animation-delay: 1.25s;
-}
-
-.spinner span:nth-child(7) {
-  animation-delay: 1.5s;
-}
+  animation: blur 3s linear infinite;
+  line-height: 20px;
+  transition: all 0.5s;
+  letter-spacing: 0.2em;
+ }
+ 
+ @keyframes blur {
+  0%, 90% {
+   filter: blur(0);
+  }
+ 
+  60% {
+   filter: blur(10px);
+  }
+ }
 
 @keyframes loading6454 {
   0%,
@@ -68,54 +51,131 @@ body {
   margin-bottom: auto;
   margin-top: auto;
   height: 60px;
-  background-color: #353b48;
+  background-color: rgb(140, 58, 179);
   border-radius: 30px;
   padding: 10px;
 }
 
-.search_input {
-  color: white;
-  border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  caret-color: transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-}
-
-.searchbar:hover > .search_input {
-  padding: 0 10px;
-  width: 450px;
-  caret-color: #fff;
-  transition: width 0.4s linear;
-}
-
-.searchbar:hover > .search_icon {
-  background: white;
-  color: #3700ff;
-}
-
-.search_icon {
-  height: 40px;
-  width: 40px;
-  float: right;
+.searchbar {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
-  text-decoration: none;
+  z-index: 3;
+  height: 44px;
+  background: white;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  margin: 0 auto;
+  width: auto;
+  max-width: 224px;
 }
 
+.searchbar:hover {
+  box-shadow: 0 1px 6px rgba(83, 13, 78, 0.28);
+  border-color: rgba(223,225,229,0);
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.searchbar-left {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.search-icon-wrapper {
+  margin: auto;
+}
+
+.search-icon {
+  margin-top: 3px;
+  color: #9aa0a6;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.searchbar-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.searchbar-center {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.searchbar-input-spacer {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  height: 34px;
+  font-size: 16px;
+}
+
+.searchbar-input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, .87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.searchbar-right {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: -5px;
+  align-items: stretch;
+  flex-direction: row
+}
+
+.searchbar-clear-icon {
+  margin-right: 12px
+}
+
+.voice-search {
+  flex: 1 0 auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0 8px;
+  width: 2.8em;
+}
 .card-header {
-  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  background-image: linear-gradient(163deg, #680750 0%, #7c1691 100%);
   text-align: center;
 }
 .card {
   background: transparent;
-  border: 2px solid #07ff07;
-  box-shadow: 2px 2px 15px #07ff07 inset;
+  border: 2px solid #131413;
+  box-shadow: 2px 2px 15px #000000 inset;
 }
 /* From uiverse.io */
 
@@ -137,8 +197,8 @@ button.b1 {
 }
 
 button.b1:hover {
-  background-color: #23c483;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  background-color: #0e1412;
+  box-shadow: 0px 15px 20px rgba(17, 19, 17, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
@@ -193,8 +253,8 @@ button.b3 {
 }
 
 button.b3:hover {
-  background-color: #3866fc;
-  box-shadow: 0px 15px 20px rgba(27, 30, 223, 0.4);
+  background-color: #000000;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
