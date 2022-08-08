@@ -26,7 +26,7 @@ export class RegistrarEmpresaComponent implements OnInit {
       Swal.fire
       ({
         icon: "success",
-        text: "Se registró la empresa exitosamente"
+        text: "Has registrado una empresa, puntoo"
       });
       forma.reset();
       this.emitirRegistro.emit();
@@ -35,7 +35,7 @@ export class RegistrarEmpresaComponent implements OnInit {
       Swal.fire
       ({
         icon: "error",
-        text: "Ha habido un error al registrar al empresa"
+        text: "Hubo un error al registrar la empresa, punto menos"
       });
     });
   }
